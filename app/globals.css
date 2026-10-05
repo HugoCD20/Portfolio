@@ -1,26 +1,86 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+@theme {
+  /* Base surfaces (dark substrate) */
+  --color-background: #111319;
+  --color-surface: #111319;
+  --color-surface-dim: #111319;
+  --color-surface-container-lowest: #0b0e13;
+  --color-surface-container-low: #191c21;
+  --color-surface-container: #1d2025;
+  --color-surface-container-high: #272a30;
+  --color-surface-container-highest: #32353b;
+  --color-surface-bright: #36393f;
+  --color-surface-variant: #32353b;
+  --color-surface-tint: #7bd0ff;
+
+  --color-on-surface: #e1e2ea;
+  --color-on-surface-variant: #bdc8d1;
+  --color-on-background: #e1e2ea;
+  --color-inverse-surface: #e1e2ea;
+  --color-inverse-on-surface: #2e3036;
+
+  --color-outline: #87929a;
+  --color-outline-variant: #3e484f;
+
+  /* Primary (sky) */
+  --color-primary: #8ed5ff;
+  --color-on-primary: #00354a;
+  --color-primary-container: #38bdf8;
+  --color-on-primary-container: #004965;
+  --color-primary-fixed: #c4e7ff;
+  --color-on-primary-fixed: #001e2c;
+  --color-primary-fixed-dim: #7bd0ff;
+  --color-on-primary-fixed-variant: #004c69;
+  --color-inverse-primary: #00668a;
+
+  /* Secondary (mint) */
+  --color-secondary: #4edea3;
+  --color-on-secondary: #003824;
+  --color-secondary-container: #00a572;
+  --color-on-secondary-container: #00311f;
+  --color-secondary-fixed: #6ffbbe;
+  --color-on-secondary-fixed: #002113;
+  --color-secondary-fixed-dim: #4edea3;
+  --color-on-secondary-fixed-variant: #005236;
+
+  /* Tertiary (periwinkle) */
+  --color-tertiary: #c5c9ff;
+  --color-on-tertiary: #131e8c;
+  --color-tertiary-container: #a3abff;
+  --color-on-tertiary-container: #2c37a0;
+  --color-tertiary-fixed: #e0e0ff;
+  --color-on-tertiary-fixed: #000767;
+  --color-tertiary-fixed-dim: #bdc2ff;
+  --color-on-tertiary-fixed-variant: #2f3aa3;
+
+  /* Error */
+  --color-error: #ffb4ab;
+  --color-on-error: #690005;
+  --color-error-container: #93000a;
+  --color-on-error-container: #ffdad6;
+
+  /* Typography (wired to next/font variables applied on <body>) */
+  --font-sans: var(--font-space-grotesk), ui-sans-serif, system-ui, sans-serif;
+  --font-mono: var(--font-space-mono), ui-monospace, SFMono-Regular, monospace;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+html {
+  scroll-behavior: smooth;
+  scrollbar-width: none;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+::-webkit-scrollbar {
+  display: none;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: var(--color-surface);
+  color: var(--color-on-surface);
+  font-family: var(--font-mono);
+  overscroll-behavior: none;
+}
+
+::selection {
+  background: color-mix(in srgb, var(--color-primary-container) 35%, transparent);
 }

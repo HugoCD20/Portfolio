@@ -1,5 +1,7 @@
+"use client";
+
 import { Mail } from "lucide-react";
-import { contactMeta, socialChannels } from "@/data/portfolio";
+import { useContent } from "./LanguageProvider";
 import { GithubIcon, LinkedinIcon } from "./BrandIcons";
 
 const kindIcon: Record<string, React.ReactNode> = {
@@ -9,12 +11,14 @@ const kindIcon: Record<string, React.ReactNode> = {
 };
 
 export default function SocialBar() {
+  const { socialChannels, contactMeta, ui } = useContent();
+
   return (
     <div className="mx-auto max-w-7xl px-6 pb-16 lg:px-12">
       <div className="flex flex-wrap items-center justify-between gap-4 rounded-xl bg-surface-container-low p-4 shadow-sm">
         <div className="flex flex-wrap items-center gap-4">
           <span className="font-mono text-[10px] font-bold uppercase tracking-wider text-on-surface-variant">
-            Network channels:
+            {ui.networkChannels}
           </span>
           <div className="flex flex-wrap items-center gap-2">
             {socialChannels.map((channel) => (
@@ -31,7 +35,7 @@ export default function SocialBar() {
             ))}
           </div>
         </div>
-        <div className="flex items-center gap-2 font-mono text-[13px] text-on-surface-variant">
+        <div className="flex flex-wrap items-center gap-x-2 gap-y-1 font-mono text-[13px] text-on-surface-variant">
           <span className="h-2 w-2 rounded-full bg-secondary" />
           <span>{contactMeta.pgpShort}</span>
           <span className="text-outline-variant">/</span>

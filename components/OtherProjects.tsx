@@ -2,12 +2,8 @@
 
 import { useState } from "react";
 import { Database, ExternalLink, Gauge, Share2, SquareTerminal, Star } from "lucide-react";
-import {
-  otherProjectFilters,
-  otherProjects,
-  type AccentTone,
-  type OtherProjectCategory,
-} from "@/data/portfolio";
+import { useContent } from "./LanguageProvider";
+import type { AccentTone, OtherProjectCategory } from "@/data/portfolio";
 import SectionHeading from "./SectionHeading";
 
 const cardIcons: Record<string, typeof Gauge> = {
@@ -24,6 +20,8 @@ const toneText: Record<AccentTone, string> = {
 };
 
 export default function OtherProjects() {
+  const { headings, otherProjectFilters, otherProjects, ui } = useContent();
+  const heading = headings.labs;
   const [filter, setFilter] = useState<"all" | OtherProjectCategory>("all");
   const visible = otherProjects.filter((p) => filter === "all" || p.category === filter);
 
@@ -32,11 +30,7 @@ export default function OtherProjects() {
       <div className="mx-auto max-w-7xl px-6 lg:px-12">
         <div className="flex flex-col justify-between gap-4 md:flex-row md:items-end">
           <div className="flex-1">
-            <SectionHeading
-              index="04"
-              eyebrow="Auxiliary labs"
-              title="Open Source & Systems Tooling"
-            />
+            <SectionHeading index={heading.index} eyebrow={heading.eyebrow} title={heading.title} />
           </div>
           <div className="mb-12 flex flex-wrap items-center gap-2" role="group" aria-label="Filter projects">
             {otherProjectFilters.map((f) => (
@@ -95,7 +89,7 @@ export default function OtherProjects() {
                     rel="noreferrer"
                     className={`inline-flex items-center gap-1.5 font-mono text-[13px] ${toneText[project.tone]} hover:opacity-80`}
                   >
-                    <span>View Source</span>
+                    <span>{ui.viewSource}</span>
                     <ExternalLink className="h-3.5 w-3.5" />
                   </a>
                 </div>

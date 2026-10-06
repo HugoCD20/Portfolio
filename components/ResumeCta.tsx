@@ -1,7 +1,11 @@
+"use client";
+
 import { Download, Eye, FileText } from "lucide-react";
-import { cvAssets } from "@/data/portfolio";
+import { useContent } from "./LanguageProvider";
 
 export default function ResumeCta() {
+  const { cvAssets, resumeContent } = useContent();
+
   return (
     <section id="resume" className="w-full scroll-mt-16 py-16">
       <div className="mx-auto max-w-7xl px-6 lg:px-12">
@@ -11,22 +15,20 @@ export default function ResumeCta() {
             <div className="space-y-4 lg:col-span-7">
               <div className="inline-flex items-center gap-2 rounded-full bg-primary/10 px-3 py-1 font-mono text-[13px] text-primary">
                 <FileText className="h-4 w-4" />
-                <span>CURRICULUM VITAE & PORTFOLIO DOSSIER</span>
+                <span>{resumeContent.kicker}</span>
               </div>
               <h2 className="font-sans text-[30px] font-bold tracking-tight text-on-surface md:text-[40px] md:leading-[48px]">
-                Want to examine my full technical trajectory?
+                {resumeContent.title}
               </h2>
               <p className="max-w-2xl font-mono text-[14px] leading-6 text-on-surface-variant">
-                My detailed resume includes comprehensive architecture breakdowns of judicial document
-                systems, benchmark statistics from hydroponic AI models, exhaustive list of
-                open-source libraries, and verified employment references.
+                {resumeContent.description}
               </p>
               <div className="flex flex-wrap items-center gap-3 pt-2 font-mono text-[13px] text-on-surface-variant">
-                <span>Format: PDF (A4)</span>
+                <span>{resumeContent.formatLabel}</span>
                 <span>•</span>
-                <span>English & Español</span>
+                <span>{resumeContent.langsLabel}</span>
                 <span>•</span>
-                <span className="text-secondary">ATS Compatible</span>
+                <span className="text-secondary">{resumeContent.atsLabel}</span>
               </div>
             </div>
             <div className="flex flex-col justify-center gap-3 lg:col-span-5">

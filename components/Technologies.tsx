@@ -1,5 +1,8 @@
+"use client";
+
 import { BrainCircuit, Cloud, Database, Monitor, Server } from "lucide-react";
-import { techGroups, type AccentTone } from "@/data/portfolio";
+import { useContent } from "./LanguageProvider";
+import type { AccentTone } from "@/data/portfolio";
 import SectionHeading from "./SectionHeading";
 
 const groupIcons: Record<string, typeof Monitor> = {
@@ -17,23 +20,22 @@ const accentText: Record<AccentTone, string> = {
 };
 
 export default function Technologies() {
+  const { headings, techGroups, ui } = useContent();
+  const heading = headings.technologies;
+
   return (
     <section id="technologies" className="w-full scroll-mt-16 py-20">
       <div className="mx-auto max-w-7xl px-6 lg:px-12">
         <div className="flex flex-col justify-between gap-4 md:flex-row md:items-end">
           <div className="flex-1">
-            <SectionHeading
-              index="02"
-              eyebrow="Technical stack"
-              title="Ecosystem & Core Tooling"
-            />
+            <SectionHeading index={heading.index} eyebrow={heading.eyebrow} title={heading.title} />
           </div>
-          <div className="mb-12 flex items-center gap-3">
+          <div className="mb-12 flex flex-wrap items-center gap-3">
             <span className="inline-flex items-center gap-1.5 rounded-full bg-primary/10 px-3 py-1 font-mono text-[10px] font-bold text-primary">
-              <span className="h-1.5 w-1.5 rounded-full bg-primary" /> Core Production Stack
+              <span className="h-1.5 w-1.5 rounded-full bg-primary" /> {ui.coreStackBadge}
             </span>
             <span className="inline-flex items-center gap-1.5 rounded-full bg-surface-container-high px-3 py-1 font-mono text-[10px] font-bold text-on-surface-variant">
-              Secondary & Tooling
+              {ui.secondaryToolingBadge}
             </span>
           </div>
         </div>
@@ -76,7 +78,7 @@ export default function Technologies() {
                     ))}
                   </div>
                 </div>
-                <div className="mt-4 flex items-center justify-between border-t border-surface-container-high/30 pt-6 font-mono text-[12px] text-on-surface-variant">
+                <div className="mt-4 flex flex-wrap items-center justify-between gap-x-4 gap-y-1 border-t border-surface-container-high/30 pt-6 font-mono text-[12px] text-on-surface-variant">
                   <span>{group.footerLeft}</span>
                   <span className={`font-bold ${accentText[group.accent]}`}>{group.footerRight}</span>
                 </div>

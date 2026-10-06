@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Space_Grotesk, Space_Mono } from "next/font/google";
+import { LanguageProvider } from "@/components/LanguageProvider";
 import "./globals.css";
 
 const spaceGrotesk = Space_Grotesk({
@@ -28,7 +29,7 @@ export default function RootLayout({
       <body
         className={`${spaceGrotesk.variable} ${spaceMono.variable} min-h-full font-mono antialiased`}
       >
-        {children}
+        <LanguageProvider>{children}</LanguageProvider>
       </body>
     </html>
   );

@@ -1,5 +1,8 @@
+"use client";
+
 import { Briefcase, GraduationCap } from "lucide-react";
-import { credentials, roles, type AccentTone } from "@/data/portfolio";
+import { useContent } from "./LanguageProvider";
+import type { AccentTone } from "@/data/portfolio";
 import SectionHeading from "./SectionHeading";
 
 const toneText: Record<AccentTone, string> = {
@@ -9,21 +12,24 @@ const toneText: Record<AccentTone, string> = {
 };
 
 export default function Experience() {
+  const { headings, roles, credentials, ui } = useContent();
+  const heading = headings.experience;
+
   return (
     <section id="experience" className="w-full scroll-mt-16 bg-surface-container-lowest/60 py-20">
       <div className="mx-auto max-w-7xl px-6 lg:px-12">
         <SectionHeading
-          index="07"
-          eyebrow="Career path"
-          title="Experience & Academic Background"
-          description="Proven history delivering production software coupled with a rigorous foundation in computational theory."
+          index={heading.index}
+          eyebrow={heading.eyebrow}
+          title={heading.title}
+          description={heading.description}
         />
 
         <div className="grid grid-cols-1 gap-12 lg:grid-cols-12">
           <div className="space-y-8 lg:col-span-7">
             <h3 className="flex items-center gap-2 font-sans text-[22px] font-semibold text-on-surface">
               <Briefcase className="h-5 w-5 text-primary" />
-              <span>Engineering Track Record</span>
+              <span>{ui.engineeringTrack}</span>
             </h3>
             <div className="space-y-6">
               {roles.map((role) => (
@@ -52,7 +58,7 @@ export default function Experience() {
           <div className="space-y-8 lg:col-span-5">
             <h3 className="flex items-center gap-2 font-sans text-[22px] font-semibold text-on-surface">
               <GraduationCap className="h-5 w-5 text-tertiary" />
-              <span>Education & Credentials</span>
+              <span>{ui.educationCreds}</span>
             </h3>
             <div className="space-y-6">
               {credentials.map((cred) => (

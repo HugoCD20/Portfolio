@@ -1,5 +1,8 @@
+"use client";
+
 import { ArrowRight } from "lucide-react";
-import { featuredProjects, type AccentTone, type FeaturedProject } from "@/data/portfolio";
+import { useContent } from "./LanguageProvider";
+import type { AccentTone, FeaturedProject } from "@/data/portfolio";
 import SectionHeading from "./SectionHeading";
 import ProjectVisual from "./ProjectVisual";
 
@@ -19,7 +22,7 @@ function ProjectInfo({ project }: { project: FeaturedProject }) {
   return (
     <div className="flex h-full flex-col justify-between space-y-6 p-8 lg:p-10">
       <div className="space-y-4">
-        <div className="flex items-center gap-3">
+        <div className="flex flex-wrap items-center gap-x-3 gap-y-2">
           <span className={`rounded px-2.5 py-1 font-mono text-[10px] font-bold ${badgeClass[project.badgeTone]}`}>
             {project.badge}
           </span>
@@ -70,14 +73,17 @@ function ProjectInfo({ project }: { project: FeaturedProject }) {
 }
 
 export default function FeaturedProjects() {
+  const { headings, featuredProjects } = useContent();
+  const heading = headings.projects;
+
   return (
     <section id="projects" className="w-full scroll-mt-16 bg-surface-container-lowest/70 py-20">
       <div className="mx-auto max-w-7xl px-6 lg:px-12">
         <SectionHeading
-          index="03"
-          eyebrow="Showcase repository"
-          title="Featured Production Projects"
-          description="Architectural deep dives into enterprise software, deep learning computer vision, and AI document retrieval."
+          index={heading.index}
+          eyebrow={heading.eyebrow}
+          title={heading.title}
+          description={heading.description}
         />
 
         <div className="space-y-12">

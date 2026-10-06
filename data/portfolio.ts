@@ -446,7 +446,245 @@ export const cvAssets: CvAsset[] = [
   },
 ];
 
-/* -------------------------------- Experience ----------------------------- */
+/* ------------------------------- UI strings -------------------------------- */
+
+export const ui = {
+  availableBadge: "Available for projects",
+  downloadCv: "Download CV",
+  openTerminalPanel: "Open terminal panel",
+  openMenu: "Open menu",
+  closeMenu: "Close menu",
+  primaryNav: "Primary",
+  mobileNav: "Mobile",
+  networkChannels: "Network channels:",
+  statusLabel: "Status:",
+  availabilityPill: "AVAILABLE FOR ENGAGEMENTS",
+  roleSummary: "Full Stack · Data & AI · DevOps",
+  exploreProjects: "EXPLORE FEATURED PROJECTS",
+  downloadResume: "DOWNLOAD RESUME",
+  coreStackBadge: "Core Production Stack",
+  secondaryToolingBadge: "Secondary & Tooling",
+  viewSource: "View Source",
+  pipelineTitle: "END-TO-END PIPELINE ARCHITECTURE",
+  pipelineSubtitle: "Raw Data ➔ Actionable Intelligence",
+  progressLabel: "Progress",
+  engineeringTrack: "Engineering Track Record",
+  educationCreds: "Education & Credentials",
+};
+
+/* ------------------------------ Section headings -------------------------- */
+
+export interface SectionHeadingContent {
+  index: string;
+  eyebrow: string;
+  title: string;
+  description?: string;
+}
+
+export const headings: Record<string, SectionHeadingContent> = {
+  about: {
+    index: "01",
+    eyebrow: "About me",
+    title: "The Engineering Philosophy & Background",
+    description:
+      "Crafting durable digital infrastructure by uniting software ergonomics with deep systems architecture.",
+  },
+  technologies: {
+    index: "02",
+    eyebrow: "Technical stack",
+    title: "Ecosystem & Core Tooling",
+  },
+  projects: {
+    index: "03",
+    eyebrow: "Showcase repository",
+    title: "Featured Production Projects",
+    description:
+      "Architectural deep dives into enterprise software, deep learning computer vision, and AI document retrieval.",
+  },
+  labs: {
+    index: "04",
+    eyebrow: "Auxiliary labs",
+    title: "Open Source & Systems Tooling",
+  },
+  dataAi: {
+    index: "05",
+    eyebrow: "Expanding frontier",
+    title: "Data, Analytics & Machine Learning",
+    description:
+      "Bridging standard software engineering with empirical data science. Turning unstructured media and log streams into automated inference pipelines.",
+  },
+  learning: {
+    index: "06",
+    eyebrow: "Active roadmap",
+    title: "What I'm Currently Leveling Up",
+    description:
+      "Structured continuous learning goals currently in execution across database internals, deep learning, and cloud infrastructure.",
+  },
+  experience: {
+    index: "07",
+    eyebrow: "Career path",
+    title: "Experience & Academic Background",
+    description:
+      "Proven history delivering production software coupled with a rigorous foundation in computational theory.",
+  },
+  contact: {
+    index: "08",
+    eyebrow: "Get in touch",
+    title: "Let's build something resilient together.",
+    description:
+      "Whether you need a full-stack engineer for a high-concurrency platform, a computer vision pipeline, or a robust data architecture consultation.",
+  },
+};
+
+/* ---------------------------------- About --------------------------------- */
+
+export interface Pillar {
+  index: string;
+  title: string;
+  description: string;
+}
+
+export const aboutContent = {
+  paragraph1:
+    "I am a software developer who thrives at the intersection of product engineering and infrastructure. Rather than confining myself to a single layer, I relish understanding the full lifecycle—from database indexing and container orchestration to micro-interactions in Vue and React.",
+  paragraph2:
+    "My journey is currently expanding deeper into data analysis, machine learning, and computer vision—applying rigorous engineering to extract actionable intelligence from messy datasets. When deploying a feature, I care equally about sub-millisecond query optimization, type safety, ergonomic developer DX, and the end-user cognitive load.",
+  tenetTitle: "Core Tenet: Production Pragmatism",
+  tenetBody:
+    "Technology exists to solve real human and operational problems. I select tools based on predictability, benchmarked telemetry, and maintainability—not transient industry fads.",
+  pillars: [
+    {
+      index: "01 // PILLAR",
+      title: "End-to-End Systems",
+      description:
+        "Comprehensive mastery from schema modeling and API protocols down to CI/CD pipelines and client-state hydration.",
+    },
+    {
+      index: "02 // PILLAR",
+      title: "Pragmatic Craft",
+      description:
+        "Defensive coding conventions, clean modular abstraction, exhaustive edge-case logging, and low technical debt.",
+    },
+    {
+      index: "03 // PILLAR",
+      title: "Active R&D",
+      description:
+        "Continuous empirical experimentation with vector embeddings, neural object detection, and data ingestion architectures.",
+    },
+  ] as Pillar[],
+};
+
+/* ---------------------------------- Resume --------------------------------- */
+
+export const resumeContent = {
+  kicker: "CURRICULUM VITAE & PORTFOLIO DOSSIER",
+  title: "Want to examine my full technical trajectory?",
+  description:
+    "My detailed resume includes comprehensive architecture breakdowns of judicial document systems, benchmark statistics from hydroponic AI models, exhaustive list of open-source libraries, and verified employment references.",
+  formatLabel: "Format: PDF (A4)",
+  langsLabel: "English & Español",
+  atsLabel: "ATS Compatible",
+};
+
+/* ---------------------------------- Contact --------------------------------- */
+
+export const contactContent = {
+  directTitle: "Direct Coordinates",
+  encryptedTitle: "Encrypted Communications",
+  fingerprintLabel: "Fingerprint:",
+  copyLabel: "Copy",
+  copiedLabel: "Copied!",
+  nameLabel: "Your Name / Organization *",
+  namePlaceholder: "e.g. Alex Rivera",
+  emailLabel: "Your Email Address *",
+  emailPlaceholder: "alex@enterprise.com",
+  topicLabel: "Topic / Area of Collaboration",
+  topics: [
+    "Full-Stack Application Development",
+    "Data Engineering & Computer Vision (AI)",
+    "DevOps, Docker & Cloud Infrastructure",
+    "System Architecture Consultation",
+    "General Inquiries / Say Hello",
+  ],
+  topicValues: ["fullstack", "data-ai", "devops", "consultation", "other"],
+  messageLabel: "Project Scope / Technical Challenge *",
+  messagePlaceholder: "Tell me about your stack, timeline, and architectural challenges...",
+  sslNote: "Protected with SSL & Anti-Spam Tokens",
+  sendIdle: "SEND MESSAGE",
+  sending: "TRANSMITTING...",
+  sent: "MESSAGE TRANSMITTED (200 OK)",
+};
+
+/* ---------------------------------- Footer --------------------------------- */
+
+export const footerContent = {
+  roleSuffix: "· Software Developer",
+  quote: "“Designed & built with curiosity.”",
+  backToTop: "Back to top",
+  copyright: "© 2024 Hugo David. All rights reserved. Substrate v2.4",
+  links: [
+    { label: "GitHub", href: "https://github.com" },
+    { label: "LinkedIn", href: "https://linkedin.com" },
+    { label: "Email", href: "mailto:contact@hugodavid.dev" },
+    { label: "RSS / Status", href: "#" },
+  ],
+};
+
+/* ------------------------------ Project visuals --------------------------- */
+
+export const projectVisuals = {
+  archive: {
+    title: "EXPEDIENTE // TEEO-2024",
+    sealed: "SEALED",
+    files: [
+      { name: "JDC-05-2026", state: "creado" },
+      { name: "JDCI-11-2026", state: "Turnado" },
+      { name: "CA-07-2026", state: "Reencausado" },
+      { name: "JNI-02-2026", state: "creado" },
+    ],
+    hashLabel: "SHA-256 chain:",
+    hashValue: "9f2c…a41b ✓ verified · replica lag 0.2s",
+    metricTitle: "SYSTEM METRIC",
+    metricBody: "Audit Latency: 42ms | DB Pool: 64 Active",
+  },
+  vision: {
+    cells: [
+      { label: "CANOPY A-01", detail: "0.96" },
+      { label: "CANOPY A-02", detail: "0.93" },
+      { label: "CANOPY A-03", detail: "0.71 · tip-burn?" },
+      { label: "CANOPY B-01", detail: "0.97" },
+      { label: "CANOPY B-02", detail: "0.95" },
+      { label: "CANOPY B-03", detail: "0.88" },
+    ],
+    metricTitle: "MODEL INFERENCE",
+    metricBody: "mAP@50: 94.2% | Inference: 14ms (FP16)",
+  },
+  rag: {
+    title: "VECTOR EMBEDDING QUERY",
+    algo: "COSINE_SIMILARITY",
+    queryLabel: "QUERY:",
+    query: "“Find clause 4.2 penalty clauses in 2023 infrastructure contracts”",
+    results: [
+      { doc: "1. Doc #8412_Annex_A.pdf (p.14)", score: "0.962 match" },
+      { doc: "2. Contract_MSA_Signed.pdf (p.8)", score: "0.914 match" },
+      { doc: "3. Telecom_SLA_Q3.pdf (p.21)", score: "0.887 match" },
+    ],
+    answerLabel: "SYNTHESIZED ANSWER:",
+    answer:
+      "Per Clause 4.2, SLA penalties trigger at <99.9% uptime with 5% rebate credited to net monthly billing.",
+  },
+  stream: {
+    title: "TELEMETRY INGESTION STREAM",
+    live: "LIVE PARSER",
+    stats: [
+      { k: "Throughput", v: "1.2M/s" },
+      { k: "Anomalies", v: "0.02%" },
+      { k: "Drop Latency", v: "<3ms" },
+    ],
+    buffer: "Buffer: Redis Ring 512MB",
+    status: "Status: Synchronized",
+  },
+};
 
 export interface Role {
   title: string;

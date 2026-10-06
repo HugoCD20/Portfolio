@@ -15,7 +15,7 @@ export default function SectionHeading({ index, eyebrow, title, description }: S
           {eyebrow}
         </span>
       </div>
-      <h2 className="font-sans text-[30px] font-semibold leading-[38px] tracking-tight text-on-surface md:text-[40px] md:leading-[48px]">
+      <h2 className="text-balance font-sans text-[30px] font-semibold leading-[38px] tracking-tight text-on-surface md:text-[40px] md:leading-[48px]">
         {title}
       </h2>
       {description ? (

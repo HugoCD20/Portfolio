@@ -36,7 +36,7 @@ export const navLinks: NavLink[] = [
 ];
 
 export const hero = {
-  name: "Hugo David",
+  name: "Hugo David Nogueda Hernández",
   roleBadge: "Desarrollador de Software",
   tagline:
     "Ingeniería Full Stack · Machine Learning Aplicado · Infraestructura Distribuida",
@@ -48,12 +48,12 @@ export const hero = {
 
 export const terminalSpecs: TerminalSpec[] = [
   { label: "Host", value: "Hugo David · Sistemas y Full-Stack", tone: "plain" },
-  { label: "OS", value: "Ubuntu LTS / Arch Hyprland", tone: "plain" },
+  { label: "OS", value: "Ubuntu LTS / Windows", tone: "plain" },
   { label: "Core", value: "Laravel 10, Vue 3, React, Python", tone: "secondary" },
   { label: "Storage", value: "PostgreSQL, Redis, pgvector", tone: "plain" },
-  { label: "R&D / ML", value: "YOLOv8, PyTorch, LangChain, Pandas", tone: "tertiary" },
+  { label: "R&D / ML", value: "YOLO11N, PyTorch, LangChain, Pandas", tone: "tertiary" },
   { label: "Deploy", value: "Docker Compose, Nginx, CI/CD", tone: "plain" },
-  { label: "Uptime", value: "5+ años desarrollando código continuo", tone: "plain" },
+  { label: "Uptime", value: "2+ años desarrollando código continuo", tone: "plain" },
   { label: "Status", value: "200 OK — Compilando sistemas escalables", tone: "secondary" },
 ];
 
@@ -515,10 +515,10 @@ export const projectVisuals = {
       { name: "CA-07-2026", state: "Reencausado" },
       { name: "JNI-02-2026", state: "creado" },
     ],
-    hashLabel: "Cadena SHA-256:",
-    hashValue: "9f2c…a41b ✓ verificado · réplica 0.2s",
-    metricTitle: "MÉTRICA DEL SISTEMA",
-    metricBody: "Latencia auditoría: 42ms | Pool BD: 64 activas",
+    hashLabel: "Acuerdo Creado:",
+    hashValue: " JDCI-05-2026",
+    metricTitle: "Juicio Finalizado",
+    metricBody: "15 acuerdos resueltos",
   },
   vision: {
     cells: [

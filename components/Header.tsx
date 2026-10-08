@@ -18,12 +18,6 @@ export default function Header() {
               <span className="font-normal text-on-surface-variant">dev</span>
             </span>
           </a>
-          <div className="hidden items-center gap-2 rounded-full bg-surface-container-high px-4 py-2 xl:flex">
-            <span className="h-2 w-2 animate-pulse rounded-full bg-secondary" />
-            <span className="font-mono text-[10px] font-bold uppercase tracking-wider text-on-surface-variant">
-              {ui.availableBadge}
-            </span>
-          </div>
         </div>
 
         <nav className="hidden min-w-0 items-center gap-0.5 lg:flex xl:gap-1" aria-label={ui.primaryNav}>

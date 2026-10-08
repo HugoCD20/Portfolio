@@ -11,19 +11,7 @@ export default function Hero() {
     <section id="hero" className="relative mx-auto max-w-7xl scroll-mt-16 px-6 pb-16 pt-12 lg:px-12">
       <div className="grid grid-cols-1 items-center gap-10 lg:grid-cols-12">
         <div className="flex flex-col items-start gap-6 lg:col-span-7">
-          <div className="flex max-w-full flex-wrap items-center gap-x-2 gap-y-1 rounded-full bg-surface-container-high/90 px-4 py-2 shadow-sm">
-            <div className="relative flex items-center justify-center">
-              <span className="h-2.5 w-2.5 rounded-full bg-secondary" />
-              <span className="absolute h-2.5 w-2.5 animate-ping rounded-full bg-secondary opacity-75" />
-            </div>
-            <span className="font-mono text-[13px] font-bold tracking-tight text-secondary">
-              {ui.availabilityPill}
-            </span>
-            <span className="font-mono text-[13px] text-outline-variant">|</span>
-            <span className="min-w-0 flex-1 truncate font-mono text-[13px] text-on-surface-variant sm:flex-none">
-              {ui.roleSummary}
-            </span>
-          </div>
+          
 
           <div className="space-y-2">
             <div className="flex flex-wrap items-baseline gap-2">

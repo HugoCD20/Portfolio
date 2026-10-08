@@ -44,12 +44,12 @@ export interface TerminalSpec {
 
 export const terminalSpecs: TerminalSpec[] = [
   { label: "Host", value: "Hugo David · Systems & Full-Stack", tone: "plain" },
-  { label: "OS", value: "Ubuntu LTS / Arch Hyprland", tone: "plain" },
+  { label: "OS", value: "Ubuntu LTS / Windows", tone: "plain" },
   { label: "Core", value: "Laravel 10, Vue 3, React, Python", tone: "secondary" },
   { label: "Storage", value: "PostgreSQL, Redis, pgvector", tone: "plain" },
-  { label: "R&D / ML", value: "YOLOv8, PyTorch, LangChain, Pandas", tone: "tertiary" },
+  { label: "R&D / ML", value: "YOLO11N, PyTorch, LangChain, Pandas", tone: "tertiary" },
   { label: "Deploy", value: "Docker Compose, Nginx, CI/CD", tone: "plain" },
-  { label: "Uptime", value: "5+ years shipping continuous code", tone: "plain" },
+  { label: "Uptime", value: "2+ years shipping continuous code", tone: "plain" },
   { label: "Status", value: "200 OK — Compiling scalable systems", tone: "secondary" },
 ];
 
@@ -177,15 +177,15 @@ export const featuredProjects: FeaturedProject[] = [
     subtitle: "High-Compliance Archive",
     title: "Gestión de Archivos TEEO",
     description:
-      "Enterprise-grade Document Management & Archival System built for high-concurrency judicial workflows. Handles millions of legal records, digitized expediente metadata, granular role-based access control, cryptographic verification, and sub-second full-text index searches.",
+      "Electoral trial management and tracking system. Handles thousands of legal records, with sensitive data protection, role-based access control, and electronic signatures.",
     bullets: [
-      "Integrated Keycloak SSO with enterprise multi-department authorization.",
-      "Real-time audit log streaming with automated hash chaining.",
-      "Containerized stack with automated database replica failovers.",
+      "Authentication system via Keycloak.",
+      "Data analysis and charts.",
+      "Containerized stack with automatic DB replica failover.",
     ],
-    stack: ["Laravel 10", "Vue.js 3", "PostgreSQL", "Docker Compose", "Redis Cache", "Keycloak SSO"],
+    stack: ["Laravel 12", "Vue.js 3", "PostgreSQL", "Docker Compose", "Keycloak"],
     primaryCta: { label: "REQUEST ARCHITECTURE BRIEF", href: "#contact" },
-    secondaryCta: { label: "GitHub Mirror", href: "https://github.com", external: true },
+    secondaryCta: { label: "See more", href: "/projects/teeo-archive" },
     visual: "archive",
   },
   {
@@ -203,7 +203,7 @@ export const featuredProjects: FeaturedProject[] = [
     ],
     stack: ["Python", "YOLOv8", "OpenCV", "PyTorch", "FastAPI", "Docker"],
     primaryCta: { label: "EXPLORE NOTEBOOK / CODE", href: "https://github.com", external: true },
-    secondaryCta: { label: "View Benchmark", href: "#data-ai" },
+    secondaryCta: { label: "View Benchmark", href: "/projects/lettuce-vision" },
     visual: "vision",
   },
   {
@@ -221,7 +221,7 @@ export const featuredProjects: FeaturedProject[] = [
     ],
     stack: ["Python", "FastAPI", "pgvector", "LangChain", "OpenAI / Local LLMs"],
     primaryCta: { label: "VIEW REPOSITORY", href: "https://github.com", external: true },
-    secondaryCta: { label: "Live Architecture", href: "#contact" },
+    secondaryCta: { label: "Live Architecture", href: "/projects/rag-retrieval" },
     visual: "rag",
   },
   {
@@ -239,7 +239,7 @@ export const featuredProjects: FeaturedProject[] = [
     ],
     stack: ["PostgreSQL", "Pandas", "Scikit-learn", "Redis", "Vue.js", "FastAPI"],
     primaryCta: { label: "VIEW SOURCE", href: "https://github.com", external: true },
-    secondaryCta: { label: "Telemetry Demo", href: "#contact" },
+    secondaryCta: { label: "Telemetry Demo", href: "/projects/telecom-pipeline" },
     visual: "stream",
   },
 ];
@@ -642,10 +642,10 @@ export const projectVisuals = {
       { name: "CA-07-2026", state: "Reencausado" },
       { name: "JNI-02-2026", state: "creado" },
     ],
-    hashLabel: "SHA-256 chain:",
-    hashValue: "9f2c…a41b ✓ verified · replica lag 0.2s",
-    metricTitle: "SYSTEM METRIC",
-    metricBody: "Audit Latency: 42ms | DB Pool: 64 Active",
+    hashLabel: "Acuerdo Creado:",
+    hashValue: " JDCI-05-2026",
+    metricTitle: "Juicio Finalizado",
+    metricBody: "15 acuerdos resueltos",
   },
   vision: {
     cells: [

@@ -141,7 +141,7 @@ export const featuredProjects: FeaturedProject[] = [
     ],
     stack: ["Laravel 12", "Vue.js 3", "PostgreSQL", "Docker Compose", "Keycloak"],
     primaryCta: { label: "SOLICITAR RESUMEN DE ARQUITECTURA", href: "#contact" },
-    secondaryCta: { label: "Ver más", href: "/#projects", external: true },
+    secondaryCta: { label: "Ver más", href: "/projects/teeo-archive" },
     visual: "archive",
   },
   {
@@ -159,7 +159,7 @@ export const featuredProjects: FeaturedProject[] = [
     ],
     stack: ["Python", "YOLOv8", "OpenCV", "PyTorch", "FastAPI", "Docker"],
     primaryCta: { label: "EXPLORAR NOTEBOOK / CÓDIGO", href: "https://github.com", external: true },
-    secondaryCta: { label: "Ver benchmark", href: "#data-ai" },
+    secondaryCta: { label: "Ver benchmark", href: "/projects/lettuce-vision" },
     visual: "vision",
   },
   {
@@ -177,7 +177,7 @@ export const featuredProjects: FeaturedProject[] = [
     ],
     stack: ["Python", "FastAPI", "pgvector", "LangChain", "OpenAI / LLMs locales"],
     primaryCta: { label: "VER REPOSITORIO", href: "https://github.com", external: true },
-    secondaryCta: { label: "Arquitectura en vivo", href: "#contact" },
+    secondaryCta: { label: "Arquitectura en vivo", href: "/projects/rag-retrieval" },
     visual: "rag",
   },
   {
@@ -195,7 +195,7 @@ export const featuredProjects: FeaturedProject[] = [
     ],
     stack: ["PostgreSQL", "Pandas", "Scikit-learn", "Redis", "Vue.js", "FastAPI"],
     primaryCta: { label: "VER CÓDIGO", href: "https://github.com", external: true },
-    secondaryCta: { label: "Demo de telemetría", href: "#contact" },
+    secondaryCta: { label: "Demo de telemetría", href: "/projects/telecom-pipeline" },
     visual: "stream",
   },
 ];
